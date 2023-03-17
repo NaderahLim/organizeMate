@@ -1,0 +1,10 @@
+<ion-app>
+  <div>
+    <div *ngIf="!initializeServicesService.AppStartUp()">
+      <img src="../assets/images/SplashImage.svg"  alt="Splash Image"/>
+    </div>
+    <div *ngIf="initializeServicesService.AppStartUp()">
+      <ion-router-outlet style="pointer-events: auto" [swipeGesture]="false"></ion-router-outlet>
+    </div>
+  </div>
+</ion-app>
